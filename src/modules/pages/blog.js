@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import React from 'react';
 import Card from '../tags/card';
 import CardLink from '../tags/card-link';
 

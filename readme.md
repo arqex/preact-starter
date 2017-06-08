@@ -1,4 +1,11 @@
-# preact-starter
+# puf-starter
+
+A boilerplate using:
+* preact (with compat mode)
+* urlhub
+* freezer-js
+* webpack with HOT reloading
+* sass styles
 
 > Webpack2 boilerplate for building SPA / PWA / offline front-end apps with :atom_symbol: [Preact](https://github.com/developit/preact)
 

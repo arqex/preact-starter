@@ -1,10 +1,18 @@
-import { render } from 'preact';
+import React from 'react';
+import ReactDom from 'react-dom';
+import freezer from './freezer';
 import './index.sass';
+
+// Start freezer reactions
+import './modules/app/appReactions';
+
+// test init reaction
+freezer.emit('app:init');
 
 let elem, App;
 function init() {
-	App = require('./views').default;
-	elem = render(App, document.getElementById('root'), elem);
+	App = require('./modules/app/App').default;
+	elem = ReactDom.render( <App />, document.getElementById('root'), elem );
 }
 
 init();
@@ -27,6 +35,6 @@ if (process.env.NODE_ENV === 'production') {
 	require('preact/devtools');
 	// listen for HMR
 	if (module.hot) {
-		module.hot.accept('./views', init);
+		module.hot.accept('./modules/app/App', init);
 	}
 }

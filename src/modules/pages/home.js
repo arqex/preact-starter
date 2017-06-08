@@ -1,5 +1,5 @@
-import { h } from 'preact';
-import { Link } from 'preact-router';
+import React from 'react';
+import Link from 'urlhub/Link';
 import Card from '../tags/card';
 
 export default function (props) {
@@ -11,8 +11,8 @@ export default function (props) {
 
 				<p>You should check out:</p>
 				<nav>
-					<Link href="/foo">Foo</Link>
-					<Link href="/foo/bar">Foo/Bar</Link>
+					<Link to="/foo">Foo</Link>
+					<Link to="/foo/bar">Foo/Bar</Link>
 				</nav>
 			</Card>
 
