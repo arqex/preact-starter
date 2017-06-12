@@ -102,4 +102,4 @@ You can inspect and modify the state of your Preact UI components at runtime usi
 
 ## License
 
-MIT © [Luke Edwards](https://lukeed.com)
+MIT © [Javier Marquez](http://arqex.com)
