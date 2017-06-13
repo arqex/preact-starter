@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../tags/card';
+import Card from 'modules/common/Card';
 
 export default function (props) {
 	return (

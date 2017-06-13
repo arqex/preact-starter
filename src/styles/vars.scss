@@ -1,0 +1,34 @@
+/**
+ * Reusable values
+ */
+
+$purple: #80004a;
+$black: #333;
+$offwhite: #ddd;
+$white: #FFF;
+
+$primary: $purple;
+
+$base-unit: 8px;
+$base-spacing: 2 * $base-unit;
+
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/**
+ * Shared Extensions (careful)
+ */
+
+%shadow {
+	box-shadow: 0 1px 3px 0 rgba($black, 0.2), 0 1px 1px 0 rgba($black, 0.14), 0 2px 1px -1px rgba($black, 0.12);
+}
+
+%fullscreen {
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../tags/card';
-import CardLink from '../tags/card-link';
+import Card from 'modules/common/Card';
+import CardLink from 'modules/common/CardLink';
 
 export default function (props) {
 	return (

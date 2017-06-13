@@ -1,0 +1,222 @@
+/**
+ * Global document styles
+ */
+
+body {
+  color: $black;
+  background: $offwhite;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+  @extend %fullscreen;
+
+  font-weight: 400;
+
+  @include font-smoothing;
+}
+
+a {
+  color: $primary;
+}
+
+li, p {
+  margin-bottom: $base-spacing / 2;
+}
+
+img {
+  user-select: none;
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding: ($base-spacing / 2) $base-spacing;
+  padding-right: 0;
+}
+
+/**
+ * Nav / Header
+ */
+
+$header-height: 7 * $base-unit;
+
+.header {
+  position: fixed;
+  height: $header-height;
+  width: 100%;
+  padding: 0;
+  left: 0;
+  top: 0;
+  background: $primary;
+
+  @extend %shadow;
+
+  z-index: 50;
+
+  h1 {
+    float: left;
+    margin: 0;
+    padding: 0 $base-spacing;
+    font-size: 24px;
+    line-height: $header-height;
+    font-weight: 400;
+    color: $white;
+  }
+
+  nav {
+    float: right;
+    font-size: 100%;
+
+    a {
+      display: inline-block;
+      height: $header-height;
+      line-height: $header-height;
+      padding: 0 $base-spacing;
+      text-align: center;
+      min-width: 50px;
+      background: rgba($white, 0);
+      will-change: background-color;
+      text-decoration: none;
+      color: $offwhite;
+
+      &:hover,
+      &:active {
+        background: rgba($white, 0.3);
+      }
+    }
+  }
+
+  @media screen and (max-width: 401px) {
+    nav a {
+      padding: 0 ($base-spacing / 2);
+      min-width: $base-spacing * 2;
+    }
+  }
+
+  @media screen and (max-width: 321px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
+}
+
+/**
+ * App Layout
+ */
+
+#app {
+  @extend %fullscreen;
+}
+
+#content {
+  padding-top: $header-height;
+}
+
+/**
+ * Base `page` styles
+ */
+
+.page {
+  padding: $base-spacing (2 * $base-spacing);
+  min-height: 100%;
+  width: 100%;
+
+  nav {
+    margin: 0 ($base-spacing / 2);
+
+    a {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 321px) {
+    padding: $base-spacing ($base-spacing / 2);
+  }
+}
+
+/**
+ * Paper Card (pseudo)
+ */
+
+.card {
+  display: block;
+  position: relative;
+  background: $white;
+  border-radius: 2px;
+  margin: 0 0 ($base-spacing / 2);
+  padding: $base-spacing;
+
+  @extend %shadow;
+
+  h2 {
+    margin-bottom: $base-spacing;
+  }
+}
+
+/**
+ * Clickable Card
+ */
+
+a.card {
+  cursor: pointer;
+  text-decoration: none;
+  color: $black;
+
+  strong, em {
+    display: block;
+  }
+
+  em {
+    font-size: 85%;
+    padding-left: $base-spacing / 2;
+  }
+}
+
+/**
+ * `Home` Page Component
+ */
+
+.page__home {
+  ul {
+    padding-left: 2 * $base-spacing;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: $base-unit auto;
+    max-width: 60 * $base-spacing;
+  }
+}
+
+/**
+ * `Article` Page Component
+ */
+
+.page__article {
+  h1 {
+    text-transform: capitalize;
+    margin-bottom: $base-spacing;
+  }
+
+  small {
+    display: block;
+    text-indent: $base-spacing;
+    font-size: 65%;
+    opacity: 0.65;
+    font-style: italic;
+  }
+
+  .back, p {
+    display: block;
+    margin-bottom: $base-spacing;
+  }
+}
+
+
+/**
+ * 404 Error Page
+ */
+
+.page__404 {
+  text-align: center;
+}

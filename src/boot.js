@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import freezer from './freezer';
-import './index.sass';
+import './boot.scss';
 
 // Start freezer reactions
 import './modules/app/appReactions';

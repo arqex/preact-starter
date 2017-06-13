@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'urlhub/Link';
-import Card from '../tags/card';
+import Card from 'modules/common/Card';
 
 export default function (props) {
 	const title = props.title;

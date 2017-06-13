@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../tags/card';
+import Card from 'modules/common/Card';
 
 const links = [{
 	name: 'lukeed/preact-starter',
@@ -10,9 +10,13 @@ const links = [{
 	desc: 'Fast 3kb React alternative with the same ES6 API. Components & Virtual DOM.',
 	href: 'https://www.npmjs.com/package/preact'
 }, {
-	name: 'developit/preact-router',
-	desc: 'URL router for Preact.',
-	href: 'https://www.npmjs.com/package/preact-router'
+	name: 'arqex/urlhub',
+	desc: 'The simplest router for any browser app.',
+	href: 'https://www.npmjs.com/package/urlhub'
+}, {
+	name: 'arqex/freezer-js',
+	desc: 'App state manager to handle immutable data.',
+	href: 'https://www.npmjs.com/package/freezer-js'
 }, {
 	name: 'webpack/webpack',
 	desc: 'A bundler for javascript and friends. Allows for code splitting & asynchronous lazy-loading.',

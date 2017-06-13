@@ -1,7 +1,7 @@
 import React from 'react';
 import router from '../../router';
 import freezer from '../../freezer';
-import Header from '../tags/header';
+import Header from 'modules/common/Header';
 
 export default class App extends React.Component {
 	constructor( props ){

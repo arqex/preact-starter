@@ -3,7 +3,7 @@ const ExtractText = require('extract-text-webpack-plugin');
 const setup = require('./setup');
 
 const dist = join(__dirname, '../dist');
-const exclude = /(node_modules|bower_components)/;
+var srcPath = join(__dirname, '../src');
 
 module.exports = env => {
 	const isProd = env && env.production;
@@ -23,6 +23,9 @@ module.exports = env => {
 		},
 		resolve: {
 			alias: {
+				src: srcPath,
+	      styles: join( srcPath, 'styles' ),
+				modules: join( srcPath, 'modules'),
         'react': 'preact-compat',
         'react-dom': 'preact-compat',
 			}
@@ -30,7 +33,7 @@ module.exports = env => {
 		module: {
 			rules: [{
 				test: /\.jsx?$/,
-				exclude: exclude,
+				exclude: /(node_modules|bower_components)/,
 				loader: 'babel-loader'
 			}, {
 				test: /\.(sass|scss)$/,
